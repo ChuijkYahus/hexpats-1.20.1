@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "hexpats",
+	"version": "${version}",
+	"name": "Hexpats",
+	"description": "Adds headpat spell pattern to hex casting.",
+	"authors": [
+		"Tallest"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/hexpats/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.lizzy.hexpats.Hexpats"
+		],
+		"client": [
+			"net.lizzy.hexpats.HexpatsClient"
+		],
+		"fabric-datagen": [
+			"net.lizzy.hexpats.HexpatsDataGenerator"
+		]
+	},
+	"mixins": [
+		"hexpats.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.12",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

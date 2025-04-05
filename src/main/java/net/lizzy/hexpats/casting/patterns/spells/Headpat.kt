@@ -5,6 +5,7 @@ import at.petrak.hexcasting.api.casting.castables.SpellAction
 import at.petrak.hexcasting.api.casting.eval.CastingEnvironment
 import at.petrak.hexcasting.api.casting.getEntity
 import at.petrak.hexcasting.api.casting.iota.Iota
+import at.petrak.hexcasting.api.misc.MediaConstants
 import at.petrak.paucal.common.ModStats
 import at.petrak.paucal.common.misc.PatPat
 import net.minecraft.entity.Entity
@@ -18,7 +19,11 @@ class Headpat : SpellAction {
     override val argc = 1
     override fun execute(args: List<Iota>, env: CastingEnvironment): SpellAction.Result {
         val target = args.getEntity(0)
-        return SpellAction.Result(Spell(target),0, listOf())
+        var cost : Long = 0
+        if (target.isOnFire) {
+            cost = MediaConstants.DUST_UNIT
+        }
+        return SpellAction.Result(Spell(target),cost, listOf())
     }
 
     private data class Spell(val target: Entity) : RenderedSpell {

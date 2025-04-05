@@ -1,0 +1,28 @@
+{
+  "name": "hexpats.entry.patterns.comfort",
+  "icon": "minecraft:red_bed",
+  "category": "hexcasting:patterns",
+  "advancement": "hexcasting:root",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "hexpats.page.comfort_desc"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexpats:headpat",
+      "anchor": "hexpats:headpat",
+      "input": "entity",
+      "output": "",
+      "text": "hexpats.page.comfort.headpat"
+    },
+    {
+      "type": "hexcasting:pattern",
+      "op_id": "hexpats:check_fire",
+      "anchor": "hexpats:check_fire",
+      "input": "entity",
+      "output": "bool",
+      "text": "hexpats.page.comfort.check_fire"
+    }
+  ]
+}

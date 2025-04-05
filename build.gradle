@@ -19,7 +19,6 @@ repositories {
 	// for more information about repositories.
 
 	maven { url "https://maven.blamejared.com/" }
-	maven { url "https://modmaven.dev/" }
     mavenCentral()
 }
 

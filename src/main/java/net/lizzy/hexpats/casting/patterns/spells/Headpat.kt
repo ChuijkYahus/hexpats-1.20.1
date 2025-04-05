@@ -18,7 +18,7 @@ class Headpat : SpellAction {
     override val argc = 1
     override fun execute(args: List<Iota>, env: CastingEnvironment): SpellAction.Result {
         val target = args.getEntity(0)
-        return SpellAction.Result(Spell(target),0, listOf(ParticleSpray.burst(env.castingEntity.pos,0.5,10)))
+        return SpellAction.Result(Spell(target),0, listOf())
     }
 
     private data class Spell(val target: Entity) : RenderedSpell {

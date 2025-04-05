@@ -25,7 +25,7 @@ class Headpat : SpellAction {
         override fun cast(env: CastingEnvironment) {
             val caster = env.castingEntity
             val player = env.world.getPlayerByUuid(caster!!.uuid)
-            var world = env.world
+            val world = env.world
 
             if (world is ServerWorld) {
                 val pos = target.eyePos

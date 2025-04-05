@@ -1,16 +1,19 @@
-package net.lizzy.hexpats;
+package net.lizzy.hexpats
 
-import net.fabricmc.api.ModInitializer;
+import net.fabricmc.api.ModInitializer
+import net.lizzy.hexpats.registry.Patterns.register
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+class Hexpats : ModInitializer {
+    override fun onInitialize() {
+        LOGGER.info("Hello Fabric world!")
 
-public class Hexpats implements ModInitializer {
-	public static final String MOD_ID = "hexpats";
-	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
+        register()
+    }
 
-	@Override
-	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
-	}
+    companion object {
+        const val MOD_ID: String = "hexpats"
+        val LOGGER: Logger = LoggerFactory.getLogger(MOD_ID)
+    }
 }

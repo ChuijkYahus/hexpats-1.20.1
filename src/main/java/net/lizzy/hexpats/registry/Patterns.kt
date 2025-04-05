@@ -14,7 +14,7 @@ object Patterns {
         Registry.register<ActionRegistryEntry>(
             HexActions.REGISTRY,
             Hexpats.MOD_ID + ":" + "headpat",
-            ActionRegistryEntry(HexPattern.fromAngles("wdwddddd", HexDir.EAST), Headpat())
+            ActionRegistryEntry(HexPattern.fromAngles("weweeeee", HexDir.EAST), Headpat())
         )
     }
 }
